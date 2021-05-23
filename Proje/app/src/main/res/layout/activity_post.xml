@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostActivity"
+    android:orientation="vertical">
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/windowBackground"
+    android:id="@+id/bar">
+    
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        android:id="@+id/toolbar">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close"
+                android:layout_alignParentStart="true"
+                android:id="@+id/close"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paylaş"
+                android:id="@+id/post"
+                android:textSize="16sp"
+                android:layout_marginEnd="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/purple_500"/>
+
+        </RelativeLayout>
+    </Toolbar>
+</com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/image_added"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:onClick="selectImage"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_add_image" />
+
+        <EditText
+            android:id="@+id/inceleme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="İnceleme"
+            android:maxLines="5"
+            android:textColorHighlight="@color/purple_500"/>
+        <RadioGroup
+            android:layout_width="214dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="50dp">
+            <RadioButton
+                android:id="@+id/film"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Film"
+                android:buttonTint="@color/purple_500"/>
+
+            <RadioButton
+                android:id="@+id/dizi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dizi"
+                android:buttonTint="@color/purple_500"/>
+            <RadioButton
+                android:id="@+id/kitap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kitap"
+                android:buttonTint="@color/purple_500"/>
+        </RadioGroup>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
